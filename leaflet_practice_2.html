@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>R Notebook</title>
+  <meta charset="utf-8">
+  <meta name="description" content="R Notebook">
+  <meta name="author" content="">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="http://slidifylibraries2.googlecode.com/git/inst/libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="http://slidifylibraries2.googlecode.com/git/inst/libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/js/slides" 
+    src="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>R Notebook</h1>
+    <h2></h2>
+    <p><br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <article data-timings="">
+    <pre><code class="r">install.packages(&quot;leaflet&quot;)
+</code></pre>
+
+<pre><code>## Installing package into &#39;/Users/rileyboeth/Library/R/3.4/library&#39;
+## (as &#39;lib&#39; is unspecified)
+</code></pre>
+
+<pre><code>## Error in contrib.url(repos, &quot;source&quot;): trying to use CRAN without setting a mirror
+</code></pre>
+
+<pre><code class="r">require(leaflet)
+</code></pre>
+
+<pre><code>## Loading required package: leaflet
+</code></pre>
+
+<pre><code class="r">install.packages(&quot;webshot&quot;)
+</code></pre>
+
+<pre><code>## Installing package into &#39;/Users/rileyboeth/Library/R/3.4/library&#39;
+## (as &#39;lib&#39; is unspecified)
+</code></pre>
+
+<pre><code>## Error in contrib.url(repos, &quot;source&quot;): trying to use CRAN without setting a mirror
+</code></pre>
+
+<pre><code class="r">library(webshot)
+</code></pre>
+
+<pre><code>## Error in library(webshot): there is no package called &#39;webshot&#39;
+</code></pre>
+
+<pre><code class="r">my_map &lt;- leaflet() %&gt;% 
+  addTiles()
+my_map
+</code></pre>
+
+<pre><code>## Error in loadNamespace(name): there is no package called &#39;webshot&#39;
+</code></pre>
+
+<pre><code class="r">my_map &lt;- my_map %&gt;%
+  addMarkers(lat=40.730610, lng=-73.935242, 
+             popup=&quot;NYC&quot;)
+my_map
+</code></pre>
+
+<pre><code>## Error in loadNamespace(name): there is no package called &#39;webshot&#39;
+</code></pre>
+
+<pre><code class="r">#NYCicon &lt;- makeIcon(
+#  iconUrl = &quot;https://upload.wikimedia.org/wikipedia/commons/0/09/NYC_Logo_Wolff_Olins.svg&quot;,
+#  iconWidth = 31*215/230, iconHeight = 31,
+#  iconAnchorX = 31*215/230/2, iconAnchorY = 16
+#)
+
+nycLatLong &lt;- data.frame(
+  lat = c(40.730610),
+  lng = c(-73.935242))
+
+nYCsites &lt;- c(
+  &quot;&lt;a href=&#39;https://www.nycgo.com/&lt;/a&gt;&quot;)
+
+plot&lt;-nycLatLong %&gt;% 
+  leaflet() %&gt;%
+  addTiles() #%&gt;%
+#  addMarkers(icon = NYCicon, popup = nYCsites)
+
+plot
+</code></pre>
+
+<pre><code>## Error in loadNamespace(name): there is no package called &#39;webshot&#39;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='NA'>
+         1
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="http://slidifylibraries2.googlecode.com/git/inst/libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

@@ -5,7 +5,7 @@ output: html_notebook
 ---
 
 
-```{r}
+```{r, include = TRUE}
 install.packages("leaflet")
 require(leaflet)
 install.packages("webshot")
@@ -30,13 +30,13 @@ nycLatLong <- data.frame(
   lat = c(40.730610),
   lng = c(-73.935242))
 
-#nYCsites <- c(
-#  "<a href='https://www.nycgo.com/</a>")
+nYCsites <- c(
+  "<a href='https://www.nycgo.com/</a>")
 
 plot<-nycLatLong %>% 
   leaflet() %>%
   addTiles() %>%
-  addMarkers(icon = NYCicon)#, popup = nYCsites)
+  addMarkers(icon = NYCicon, popup = nYCsites)
 
 plot
 ```
